@@ -61,7 +61,7 @@ const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © 2024 شركة تثمير. جميع الحقوق محفوظة.
+            © 2026 شركة تثمير. جميع الحقوق محفوظة.
           </p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="#" className="text-gray-400 hover:text-real-estate-green transition-colors text-sm">
