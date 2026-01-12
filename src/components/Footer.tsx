@@ -9,9 +9,9 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-transparent rounded-lg flex items-center justify-center">
-                <img 
-                  src="/lovable-uploads/938f7ae7-a7d4-4e99-9154-1dc54158fe4a.png" 
-                  alt="شعار تثمير" 
+                <img
+                  src={import.meta.env.BASE_URL + "lovable-uploads/938f7ae7-a7d4-4e99-9154-1dc54158fe4a.png"}
+                  alt="شعار تثمير"
                   className="w-12 h-12 object-contain"
                 />
               </div>
