@@ -17,7 +17,7 @@ const ContactSection = () => {
 
   // إعدادات EmailJS
   const EMAILJS_SERVICE_ID = "service_5tjzza7";
-  const EMAILJS_TEMPLATE_ID = "template_xkx6njm";  
+  const EMAILJS_TEMPLATE_ID = "template_xkx6njm";
   const EMAILJS_PUBLIC_KEY = "ZGXkDBjyky38ujjE5";
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -30,7 +30,7 @@ const ContactSection = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!formData.name || !formData.email || !formData.message) {
       toast({
         title: "خطأ",
@@ -90,13 +90,13 @@ const ContactSection = () => {
       <div className="real-estate-container">
         {/* Partnership Image */}
         <div className="text-center mb-12">
-          <img 
-            src="/lovable-uploads/97024a74-156f-4795-8688-6681d4a859e6.png" 
-            alt="تثمير - تحقيق أقصى استفادة من شراكتنا في استثمار العقارات" 
+          <img
+            src={import.meta.env.BASE_URL + "lovable-uploads/97024a74-156f-4795-8688-6681d4a859e6.png"}
+            alt="تثمير - تحقيق أقصى استفادة من شراكتنا في استثمار العقارات"
             className="w-full rounded-xl shadow-lg"
           />
         </div>
-        
+
         <div className="text-center mb-16">
           <h3 className="text-3xl font-bold text-real-estate-text mb-4">
             تواصل معنا
@@ -105,7 +105,7 @@ const ContactSection = () => {
             نحن هنا لمساعدتك في تحقيق أهدافك الاستثمارية
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8">
@@ -120,7 +120,7 @@ const ContactSection = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="real-estate-card p-6">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 bg-real-estate-green rounded-full flex items-center justify-center">
@@ -132,7 +132,7 @@ const ContactSection = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="real-estate-card p-6">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 bg-real-estate-green rounded-full flex items-center justify-center">
@@ -144,7 +144,7 @@ const ContactSection = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="real-estate-card p-6">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 bg-real-estate-green rounded-full flex items-center justify-center">
@@ -157,14 +157,14 @@ const ContactSection = () => {
               </div>
             </div>
           </div>
-          
+
           {/* Contact Form */}
           <div className="real-estate-card p-8">
             <h4 className="text-2xl font-bold text-real-estate-text mb-6">احصل على استشارة مجانية</h4>
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label className="block text-real-estate-text font-medium mb-2">الاسم الكامل</label>
-                <input 
+                <input
                   type="text"
                   name="name"
                   value={formData.name}
@@ -174,10 +174,10 @@ const ContactSection = () => {
                   required
                 />
               </div>
-              
+
               <div>
                 <label className="block text-real-estate-text font-medium mb-2">رقم الهاتف</label>
-                <input 
+                <input
                   type="tel"
                   name="phone"
                   value={formData.phone}
@@ -187,10 +187,10 @@ const ContactSection = () => {
                   dir="ltr"
                 />
               </div>
-              
+
               <div>
                 <label className="block text-real-estate-text font-medium mb-2">البريد الإلكتروني</label>
-                <input 
+                <input
                   type="email"
                   name="email"
                   value={formData.email}
@@ -200,10 +200,10 @@ const ContactSection = () => {
                   required
                 />
               </div>
-              
+
               <div>
                 <label className="block text-real-estate-text font-medium mb-2">نوع الاستفسار</label>
-                <select 
+                <select
                   name="inquiryType"
                   value={formData.inquiryType}
                   onChange={handleInputChange}
@@ -214,10 +214,10 @@ const ContactSection = () => {
                   <option value="شراكة تجارية">شراكة تجارية</option>
                 </select>
               </div>
-              
+
               <div>
                 <label className="block text-real-estate-text font-medium mb-2">الرسالة</label>
-                <textarea 
+                <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
@@ -227,7 +227,7 @@ const ContactSection = () => {
                   required
                 ></textarea>
               </div>
-              
+
               <Button type="submit" className="real-estate-button w-full" disabled={isLoading}>
                 {isLoading ? "جاري الإرسال..." : "إرسال الاستفسار"}
               </Button>
